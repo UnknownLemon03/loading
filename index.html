@@ -16,229 +16,98 @@
         }
       }
     </script>
-    <style>
-        /* From Uiverse.io by Nawsome */ 
-    .boxes {
-      --size: 32px;
-      --duration: 800ms;
-      height: calc(var(--size) * 2);
-      width: calc(var(--size) * 3);
-      position: relative;
-      transform-style: preserve-3d;
-      transform-origin: 50% 50%;
-      margin-top: calc(var(--size) * 1.5 * -1);
-      transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
-    }
-    
-    .boxes .box {
-      width: var(--size);
-      height: var(--size);
-      top: 0;
-      left: 0;
-      position: absolute;
-      transform-style: preserve-3d;
-    }
-    
-    .boxes .box:nth-child(1) {
-      transform: translate(100%, 0);
-      -webkit-animation: box1 var(--duration) linear infinite;
-      animation: box1 var(--duration) linear infinite;
-    }
-    
-    .boxes .box:nth-child(2) {
-      transform: translate(0, 100%);
-      -webkit-animation: box2 var(--duration) linear infinite;
-      animation: box2 var(--duration) linear infinite;
-    }
-    
-    .boxes .box:nth-child(3) {
-      transform: translate(100%, 100%);
-      -webkit-animation: box3 var(--duration) linear infinite;
-      animation: box3 var(--duration) linear infinite;
-    }
-    
-    .boxes .box:nth-child(4) {
-      transform: translate(200%, 0);
-      -webkit-animation: box4 var(--duration) linear infinite;
-      animation: box4 var(--duration) linear infinite;
-    }
-    
-    .boxes .box > div {
-      --background: #5C8DF6;
-      --top: auto;
-      --right: auto;
-      --bottom: auto;
-      --left: auto;
-      --translateZ: calc(var(--size) / 2);
-      --rotateY: 0deg;
-      --rotateX: 0deg;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: var(--background);
-      top: var(--top);
-      right: var(--right);
-      bottom: var(--bottom);
-      left: var(--left);
-      transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
-    }
-    
-    .boxes .box > div:nth-child(1) {
-      --top: 0;
-      --left: 0;
-    }
-    
-    .boxes .box > div:nth-child(2) {
-      --background: #145af2;
-      --right: 0;
-      --rotateY: 90deg;
-    }
-    
-    .boxes .box > div:nth-child(3) {
-      --background: #447cf5;
-      --rotateX: -90deg;
-    }
-    
-    .boxes .box > div:nth-child(4) {
-      --background: #DBE3F4;
-      --top: 0;
-      --left: 0;
-      --translateZ: calc(var(--size) * 3 * -1);
-    }
-    
-    @-webkit-keyframes box1 {
-      0%, 50% {
-        transform: translate(100%, 0);
-      }
-    
-      100% {
-        transform: translate(200%, 0);
-      }
-    }
-    
-    @keyframes box1 {
-      0%, 50% {
-        transform: translate(100%, 0);
-      }
-    
-      100% {
-        transform: translate(200%, 0);
-      }
-    }
-    
-    @-webkit-keyframes box2 {
-      0% {
-        transform: translate(0, 100%);
-      }
-    
-      50% {
-        transform: translate(0, 0);
-      }
-    
-      100% {
-        transform: translate(100%, 0);
-      }
-    }
-    
-    @keyframes box2 {
-      0% {
-        transform: translate(0, 100%);
-      }
-    
-      50% {
-        transform: translate(0, 0);
-      }
-    
-      100% {
-        transform: translate(100%, 0);
-      }
-    }
-    
-    @-webkit-keyframes box3 {
-      0%, 50% {
-        transform: translate(100%, 100%);
-      }
-    
-      100% {
-        transform: translate(0, 100%);
-      }
-    }
-    
-    @keyframes box3 {
-      0%, 50% {
-        transform: translate(100%, 100%);
-      }
-    
-      100% {
-        transform: translate(0, 100%);
-      }
-    }
-    
-    @-webkit-keyframes box4 {
-      0% {
-        transform: translate(200%, 0);
-      }
-    
-      50% {
-        transform: translate(200%, 100%);
-      }
-    
-      100% {
-        transform: translate(100%, 100%);
-      }
-    }
-    
-    @keyframes box4 {
-      0% {
-        transform: translate(200%, 0);
-      }
-    
-      50% {
-        transform: translate(200%, 100%);
-      }
-    
-      100% {
-        transform: translate(100%, 100%);
-      }
-    }
-    </style>
+
 </head>
 <body class="h-screen w-full flex justify-center items-center flex-col">
-<div class="boxes mb-32">
-    <div class="box">
+    <div class="flex justify-center items-center flex-col" id="loader">
+        <div class="boxes mb-32">
+            <div class="box">
+                <div></div>
         <div></div>
         <div></div>
         <div></div>
-        <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-    <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+    <span>Please wait project is loading in <span id="count"></span></span>
+    <span id="message">&#128579; Sorry i'm using free services to host project</span>
+</div>  
+<div class="hidden  w-full h-full justify-center items-center flex" id="generator">
+    <form class="max-w-sm mx-auto w-full">
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="Redirect" id="Redirect" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="Redirect" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Project Url 
+            </label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="Request" id="Request" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="Request" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Request url
+            </label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="number" name="count" id="count" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="count" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Wait Time period
+            </label>
+        </div>
+        <div class="relative z-0 w-full mb-5 group">
+            <input type="text" name="message" id="message" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+            <label for="message" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                Message
+            </label>
+        </div>
+       
+        
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Copy Url</button>
+    </form>
 </div>
-<span>Please wait project is loading in <span id="count"></span></span>
-<span id="message">&#128579; Sorry i'm using free services to host project</span>
 </body>
-    <script>
+<script>
+       document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault(); 
+            
+            const form = event.target; 
+            const formData = new FormData(form); 
+            
+            const data = {
+                sec_count:parseInt(formData.get("count")),
+                req:formData.get("Request"),
+                redirect:formData.get("Redirect"), 
+                message:formData.get("message")
+            };
+            
+            const url = window.location.href+"?data="+`${JSON.stringify(data)}`
+            navigator.clipboard.writeText(url)
+        })
+
         const urlParams = new URLSearchParams(window.location.search);
         const data = urlParams.get('data'); // Get the value of the 'data' parameter
 
         const params = JSON.parse(data);
         console.log(params); // Log the 'data' query parameter value
+        if(!params){
+            document.querySelector("#loader").classList.toggle("hidden")
+            document.querySelector("#generator").classList.toggle("hidden")
+        }
         if(params) {
             const {sec_count,req,redirect , message} = params;
             function ChangeVal(count){
@@ -260,5 +129,191 @@
             },1000)
         };
     </script>
+        <style>
+            /* From Uiverse.io by Nawsome */ 
+        .boxes {
+          --size: 32px;
+          --duration: 800ms;
+          height: calc(var(--size) * 2);
+          width: calc(var(--size) * 3);
+          position: relative;
+          transform-style: preserve-3d;
+          transform-origin: 50% 50%;
+          margin-top: calc(var(--size) * 1.5 * -1);
+          transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+        }
+        
+        .boxes .box {
+          width: var(--size);
+          height: var(--size);
+          top: 0;
+          left: 0;
+          position: absolute;
+          transform-style: preserve-3d;
+        }
+        
+        .boxes .box:nth-child(1) {
+          transform: translate(100%, 0);
+          -webkit-animation: box1 var(--duration) linear infinite;
+          animation: box1 var(--duration) linear infinite;
+        }
+        
+        .boxes .box:nth-child(2) {
+          transform: translate(0, 100%);
+          -webkit-animation: box2 var(--duration) linear infinite;
+          animation: box2 var(--duration) linear infinite;
+        }
+        
+        .boxes .box:nth-child(3) {
+          transform: translate(100%, 100%);
+          -webkit-animation: box3 var(--duration) linear infinite;
+          animation: box3 var(--duration) linear infinite;
+        }
+        
+        .boxes .box:nth-child(4) {
+          transform: translate(200%, 0);
+          -webkit-animation: box4 var(--duration) linear infinite;
+          animation: box4 var(--duration) linear infinite;
+        }
+        
+        .boxes .box > div {
+          --background: #5C8DF6;
+          --top: auto;
+          --right: auto;
+          --bottom: auto;
+          --left: auto;
+          --translateZ: calc(var(--size) / 2);
+          --rotateY: 0deg;
+          --rotateX: 0deg;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: var(--background);
+          top: var(--top);
+          right: var(--right);
+          bottom: var(--bottom);
+          left: var(--left);
+          transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+        }
+        
+        .boxes .box > div:nth-child(1) {
+          --top: 0;
+          --left: 0;
+        }
+        
+        .boxes .box > div:nth-child(2) {
+          --background: #145af2;
+          --right: 0;
+          --rotateY: 90deg;
+        }
+        
+        .boxes .box > div:nth-child(3) {
+          --background: #447cf5;
+          --rotateX: -90deg;
+        }
+        
+        .boxes .box > div:nth-child(4) {
+          --background: #DBE3F4;
+          --top: 0;
+          --left: 0;
+          --translateZ: calc(var(--size) * 3 * -1);
+        }
+        
+        @-webkit-keyframes box1 {
+          0%, 50% {
+            transform: translate(100%, 0);
+          }
+        
+          100% {
+            transform: translate(200%, 0);
+          }
+        }
+        
+        @keyframes box1 {
+          0%, 50% {
+            transform: translate(100%, 0);
+          }
+        
+          100% {
+            transform: translate(200%, 0);
+          }
+        }
+        
+        @-webkit-keyframes box2 {
+          0% {
+            transform: translate(0, 100%);
+          }
+        
+          50% {
+            transform: translate(0, 0);
+          }
+        
+          100% {
+            transform: translate(100%, 0);
+          }
+        }
+        
+        @keyframes box2 {
+          0% {
+            transform: translate(0, 100%);
+          }
+        
+          50% {
+            transform: translate(0, 0);
+          }
+        
+          100% {
+            transform: translate(100%, 0);
+          }
+        }
+        
+        @-webkit-keyframes box3 {
+          0%, 50% {
+            transform: translate(100%, 100%);
+          }
+        
+          100% {
+            transform: translate(0, 100%);
+          }
+        }
+        
+        @keyframes box3 {
+          0%, 50% {
+            transform: translate(100%, 100%);
+          }
+        
+          100% {
+            transform: translate(0, 100%);
+          }
+        }
+        
+        @-webkit-keyframes box4 {
+          0% {
+            transform: translate(200%, 0);
+          }
+        
+          50% {
+            transform: translate(200%, 100%);
+          }
+        
+          100% {
+            transform: translate(100%, 100%);
+          }
+        }
+        
+        @keyframes box4 {
+          0% {
+            transform: translate(200%, 0);
+          }
+        
+          50% {
+            transform: translate(200%, 100%);
+          }
+        
+          100% {
+            transform: translate(100%, 100%);
+          }
+        }
+        </style>
 </html>
 </html>
