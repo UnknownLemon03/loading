@@ -95,7 +95,7 @@
                 message:formData.get("message")
             };
             
-            const url = window.location.href+"?data="+`${JSON.stringify(data)}`
+            const url = window.location.href+"?data="+`${encodeURIComponent(JSON.stringify(data))}`
             navigator.clipboard.writeText(url)
         })
 
