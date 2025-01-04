@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
       tailwind.config = {
@@ -82,7 +82,7 @@
     </form>
 </div>
 </body>
-<script>
+<script defer>
        document.querySelector("form").addEventListener("submit", function (event) {
             event.preventDefault(); 
             
@@ -118,9 +118,9 @@
              axios.get(req).then(e=>{
               console.log(e)
               if(e.status >= 500 || e.status >= 500) return
-              window.location.href = redirect ?? window.location.href; 
+              setTimeout(()=>window.location.href = redirect ?? window.location.href,1000) 
              }).catch(e=>console.log(e))
-                window.location.href = redirect ?? window.location.href; // Redirect if needed
+                setTimeout(()=>window.location.href = redirect ?? window.location.href,1000) // Redirect if needed)
             }
 
             handleReq();
@@ -131,7 +131,7 @@
                 ChangeVal(count-1);
                 if(count == 1){
                     clearInterval(id);
-                    window.location.href = redirect ?? window.location.href;
+                    setTimeout(()=>window.location.href = redirect ?? window.location.href,1000) 
                 }
             },1000)
         };
