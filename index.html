@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -103,7 +104,6 @@
         const data = urlParams.get('data'); // Get the value of the 'data' parameter
 
         const params = JSON.parse(data);
-        console.log(params); // Log the 'data' query parameter value
         if(!params){
             document.querySelector("#loader").classList.toggle("hidden")
             document.querySelector("#generator").classList.toggle("hidden")
@@ -114,9 +114,16 @@
                 document.getElementById("count").innerText = count;
             }
             if(message) document.getElementById("message").innerHTML = message;
-            fetch(req, { method: "GET" }).then(e => {
+            async function handleReq() {
+             axios.get(req).then(e=>{
+              console.log(e)
+              if(e.status >= 500 || e.status >= 500) return
+              window.location.href = redirect ?? window.location.href; 
+             }).catch(e=>console.log(e))
                 window.location.href = redirect ?? window.location.href; // Redirect if needed
-            });
+            }
+
+            handleReq();
             let count = parseInt(sec_count);
             ChangeVal(count)
             let id = setInterval(()=>{
