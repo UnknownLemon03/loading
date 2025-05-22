@@ -115,6 +115,8 @@
             }
             if(message) document.getElementById("message").innerHTML = message;
             async function handleReq() {
+              if(req.equals("-1"))
+                return  setTimeout(()=>window.location.href = redirect ?? window.location.href,1000) // Redirect if needed)
              axios.get(req).then(e=>{
               console.log(e)
               if(e.status >= 500 || e.status >= 500) return
